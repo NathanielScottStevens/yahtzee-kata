@@ -7,8 +7,8 @@ namespace YahtzeeKata
     {
         const string diceRollsGreaterThanFiveMessage = "The number of dice are greater than five. They must equal five.";
         const string diceRollsLessThanFiveMessage = "The number of dice are less than five. They must equal five.";
-        const string DiceGreaterThanSixMessage = "A rolled dice was greater than six. Only six sided die are valid.";
-        const string DiceLessThanOneMessage = "A rolled dice was less than one.";
+        const string diceGreaterThanSixMessage = "A rolled dice was greater than six. Only six sided die are valid.";
+        const string diceLessThanOneMessage = "A rolled dice was less than one. Only six sided die are valid.";
 
         public static int Score(Category category, int[] diceRolls)
         {
@@ -81,10 +81,10 @@ namespace YahtzeeKata
             {
                 if (diceRolls[i] > 6)
                     throw new ArgumentOutOfRangeException(
-                        string.Format("diceRolls[{0}]", i), DiceGreaterThanSixMessage);
+                        string.Format("diceRolls[{0}]", i), diceGreaterThanSixMessage);
                 if (diceRolls[i] < 1)
                     throw new ArgumentOutOfRangeException(
-                        string.Format("diceRolls[{0}]", i), DiceLessThanOneMessage);
+                        string.Format("diceRolls[{0}]", i), diceLessThanOneMessage);
             }
         }
 
